@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">first</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="textСhange1">HELLO</string>
+    <string name="textСhange2">WORLD</string>
+</resources>
