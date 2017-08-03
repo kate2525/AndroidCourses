@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--//цикличное моргание совы android:oneshot="false"-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/sova_anmation_1" android:duration="850" />
+    <item android:drawable="@drawable/sova_anmation_2" android:duration="250" />
+    <item android:drawable="@drawable/sova_anmation_3" android:duration="550" />
+
+    <item android:drawable="@drawable/sova_anmation_1" android:duration="950" />
+    <item android:drawable="@drawable/sova_anmation_2" android:duration="300" />
+    <item android:drawable="@drawable/sova_anmation_3" android:duration="390" />
+</animation-list>
