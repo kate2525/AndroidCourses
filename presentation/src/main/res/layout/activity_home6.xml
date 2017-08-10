@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="java.lang.String" />
+
+        <variable
+            name="user"
+            type="com.example.kate.home6.User" />
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{user.color}"
+        tools:context="com.example.kate.home6.Home6Activity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="51dp"
+            android:onClick="@{()-> user.onClick()}"
+            app:src="@{user.url}" />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="29dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="@{user.name}" />
+
+        <TextView
+            android:id="@+id/textAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textName"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginTop="26dp"
+            android:text="@{String.valueOf(user.age)}" />
+
+        <TextView
+            android:id="@+id/textBoolean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignStart="@+id/textAge"
+            android:layout_marginBottom="12dp"
+            android:text="@{String.valueOf(user.woman)}" />
+
+
+    </RelativeLayout>
+
+</layout>
