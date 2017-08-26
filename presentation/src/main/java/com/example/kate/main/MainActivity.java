@@ -4,41 +4,89 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.kate.R;
 import com.example.kate.home1.Home1Activity;
+import com.example.kate.home10.Home10Activity;
 import com.example.kate.home2.Home2Activity;
 import com.example.kate.home3.Home3Activity;
 import com.example.kate.home4.Home4Activity;
 import com.example.kate.home5.Home5Activity;
 import com.example.kate.home6.Home6Activity;
+import com.example.kate.home9.Home9Activity;
+import com.example.kate.lesson13.Lesson13Activity;
 import com.example.kate.lesson2.Lesson2Activity;
 import com.example.kate.lesson3.Lesson3Activity;
 import com.example.kate.lesson4.Lesson4Activity;
 import com.example.kate.lesson5.Lesson5Activity;
 import com.example.kate.lesson6.Lesson6Activity;
 import com.example.kate.lesson7.Lesson7Activity;
+import com.example.kate.lesson8.Lesson8Activity;
+import com.example.kate.lessson12.Lesson12Activity;
+
+import io.reactivex.Observer;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.observers.DisposableObserver;
+import io.reactivex.subjects.BehaviorSubject;
+import io.reactivex.subjects.PublishSubject;
+import io.reactivex.subjects.ReplaySubject;
+
 
 public class MainActivity extends Activity {
+
+
+//    private PublishSubject<String> publishSubject = PublishSubject.create();
+//    private BehaviorSubject<String> behaviorSubject = BehaviorSubject.create();
+//    private ReplaySubject<String> replaySubject = ReplaySubject.create();
+
     private Button home1Button;
     private Button home2Button;
     private Button home3Button;
     private Button home4Button;
     private Button home5Button;
     private Button home6Button;
+    private Button home9Button;
+    private Button home10Button;
     private Button lesson2Button;
     private Button lesson3Button;
     private Button lesson4Button;
     private Button lesson5Button;
     private Button lesson6Button;
     private Button lesson7Button;
+    private Button lesson8Button;
+    private Button lesson12Button;
+    private Button lesson13Button;
+    //private Disposable disposable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        publishSubject.onNext("Один");
+//        publishSubject.onNext("Два");
+//        publishSubject.onNext("Три");
+//        publishSubject.onNext("Четыре");
+//
+//        disposable = publishSubject.subscribeWith(new DisposableObserver<String>() {
+//            @Override
+//            public void onNext(@NonNull String s) {
+//                Log.e("AAA", s);
+//            }
+//
+//            public void onError(@NonNull Throwable e) {}
+//
+//            @Override
+//            public void onComplete() {}
+//        });
+//
+//        publishSubject.onNext("Пять");
+//        publishSubject.onNext("Шесть");
+//        publishSubject.onNext("Семь");
 
         home1Button = (Button) findViewById(R.id.home1Button);
         home2Button = (Button) findViewById(R.id.home2Button);
@@ -46,12 +94,17 @@ public class MainActivity extends Activity {
         home4Button = (Button) findViewById(R.id.home4Button);
         home5Button = (Button) findViewById(R.id.home5Button);
         home6Button = (Button) findViewById(R.id.home6Button);
+        home9Button = (Button) findViewById(R.id.home9Button);
+        home10Button = (Button) findViewById(R.id.home10Button);
         lesson2Button = (Button) findViewById(R.id.lesson2Button);
         lesson3Button = (Button) findViewById(R.id.lesson3Button);
         lesson4Button = (Button) findViewById(R.id.lesson4Button);
         lesson5Button = (Button) findViewById(R.id.lesson5Button);
         lesson6Button = (Button) findViewById(R.id.lesson6Button);
         lesson7Button = (Button) findViewById(R.id.lesson7Button);
+        lesson8Button = (Button) findViewById(R.id.lesson8Button);
+        lesson12Button = (Button) findViewById(R.id.lesson12Button);
+        lesson13Button = (Button) findViewById(R.id.lesson13Button);
 
         home1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +151,22 @@ public class MainActivity extends Activity {
                 overridePendingTransition(R.anim.right,R.anim.left);
             }
         });
+        home9Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Home9Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right,R.anim.left);
+            }
+        });
+        home10Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Home10Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right,R.anim.left);
+            }
+        });
         lesson2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,6 +203,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
         lesson7Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,7 +211,36 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        lesson8Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Lesson8Activity.class);
+                startActivity(intent);
+            }
+        });
+        lesson12Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Lesson12Activity.class);
+                startActivity(intent);
+            }
+        });
+        lesson13Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Lesson13Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if(!disposable.isDisposed()) {
+//            disposable.dispose();
+//        }
+//    }
 }

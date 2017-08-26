@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.example.kate.lesson8.Lesson8ViewModel.STATE"/>
+        <import type="java.lang.String" />
+
+        <variable
+            name="viewModel"
+            type="com.example.kate.lesson8.Lesson8ViewModel" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.kate.lesson8.Lesson8Activity">
+
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}"
+            android:text="@{viewModel.name}" />
+
+        <TextView
+            android:id="@+id/textAge"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}"
+            android:text="@{String.valueOf(viewModel.age)}" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+            android:visibility="@{viewModel.state == STATE.PROGRESS ? View.VISIBLE : View.GONE}"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</layout>
+

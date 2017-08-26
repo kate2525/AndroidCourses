@@ -104,5 +104,44 @@
         android:layout_below="@+id/lesson6Button"
         android:layout_alignStart="@+id/lesson6Button" />
 
+    <Button
+        android:id="@+id/lesson8Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lesson8"
+        android:layout_below="@+id/lesson7Button"
+        android:layout_alignStart="@+id/lesson7Button" />
+    <Button
+        android:id="@+id/home10Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="home10"
+        android:layout_below="@+id/home9Button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/lesson12Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lesson12"
+        android:layout_below="@+id/lesson8Button"
+        android:layout_alignStart="@+id/lesson8Button" />
+
+    <Button
+        android:id="@+id/home9Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/home6Button"
+        android:text="home9" />
+
+    <Button
+        android:id="@+id/lesson13Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lesson8Button"
+        android:text="lesson13"
+        android:layout_below="@+id/lesson12Button" />
+
 
 </RelativeLayout>
