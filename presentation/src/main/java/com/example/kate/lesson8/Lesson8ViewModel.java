@@ -56,14 +56,14 @@ public class Lesson8ViewModel implements BaceViewModel {
 
 
         ProfileId profileId = new ProfileId();
-        profileId.setId("123");
+        profileId.setId("77899B90-5B89-4877-FF9E-C5D0E9C66E00");
             useCase.execute(profileId, new DisposableObserver<ProfileModel>() {
 
                 //получаем данные
                 @Override
                 public void onNext(@NonNull ProfileModel profile) {
                     name.set(profile.getName());
-                    Log.d("AAAAAAAA", "getName");
+                    Log.d("AAAAAAAA", "getName " + profile.getName());
                     age.set(profile.getAge());
                     Log.d("AAAAAAAA", "getAge");
                     state.set(STATE.DATA);
@@ -72,7 +72,7 @@ public class Lesson8ViewModel implements BaceViewModel {
                 //cообщает об ошибках
                 @Override
                 public void onError(@NonNull Throwable e) {
-                    Log.e("AAAAAA", "error " +e);
+                    Log.e("AAAAAA", "error " +e.toString());
                 }
                 //cообщает о завершении
                 @Override

@@ -2,6 +2,7 @@ package com.kate.date.net;
 
 
 import com.kate.date.entity.Profile;
+import com.kate.date.entity.UserDate;
 
 import java.util.List;
 
@@ -22,5 +23,9 @@ public interface RestAPI {
     @GET("data/profile")
     Observable<List<Profile>> getProfile();
 
+    @GET("data/profile/{id}")
+    Observable<Profile> getProfileById(@Path("id") String id);
 
+    @GET("data/profile")
+    Observable<List<UserDate>> getUsers();
 }

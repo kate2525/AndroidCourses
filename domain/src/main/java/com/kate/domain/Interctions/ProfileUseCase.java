@@ -27,14 +27,12 @@ public class ProfileUseCase extends UseCase <ProfileId, ProfileModel>{
 //        //создадим Observable и делаем задержку в 3 сек методом .delay(3, TimeUnit.SECONDS)
 //        //Observable - источник данных
 //        return Observable.just(profile)
-        return RestService.getInstance().getProfile()
+        return RestService.getInstance().getProfileById(param.getId())
                // .delay(3, TimeUnit.SECONDS)
                 //модифицирует данные из одного формата в другой формат.На входе Profile,а на выходе ProfileModel
-                .map(new Function<List<Profile>, ProfileModel>() {
+                .map(new Function<Profile, ProfileModel>() {
                     @Override
-                    public ProfileModel apply(@NonNull List<Profile> profileList ) throws Exception {
-
-                        Profile profileData = profileList.get(0);
+                    public ProfileModel apply(@NonNull Profile profileData ) throws Exception {
 
                         ProfileModel profileModel = new ProfileModel();
                         profileModel.setName(profileData.getName());

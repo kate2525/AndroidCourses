@@ -4,6 +4,7 @@ package com.kate.date.net;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.kate.date.entity.Profile;
+import com.kate.date.entity.UserDate;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -55,6 +56,14 @@ public class RestService {
 
     public Observable<List<Profile>> getProfile(){
         return  restAPI.getProfile();
+    }
+
+    public Observable<List<UserDate>> getUsers(){
+        return  restAPI.getUsers();
+    }
+
+    public Observable <Profile> getProfileById(String id){
+        return  restAPI.getProfileById(id);
     }
 
     public Observable <Void> saveProfile(Profile profile){

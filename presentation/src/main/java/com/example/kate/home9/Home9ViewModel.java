@@ -16,16 +16,13 @@ import java.util.List;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.observers.DisposableObserver;
 
-
-
-
 public class Home9ViewModel implements BaceViewModel {
 
-    public  enum  STATE {PROGRESS, DATA}
+    public enum STATE {PROGRESS, DATA}
+
     //public ObservableField<Home9ViewModel.STATE> state = new ObservableField<>(Home9ViewModel.STATE.PROGRESS);
     private ResycleViewUseCase resycleViewUseCase = new ResycleViewUseCase();
     public MyResycleViewAdapter adapter = new MyResycleViewAdapter();
-
 
 
     @Override
@@ -44,7 +41,7 @@ public class Home9ViewModel implements BaceViewModel {
 
             @Override
             public void onNext(@NonNull List<ResycleURL> resycleURLs) {
-                Log.d("AAAAAA", "resycleURLs "+resycleURLs.toString());
+                Log.d("AAAAAA", "resycleURLs " + resycleURLs.toString());
                 //отправляем данные из domain в класс Adapter
                 adapter.setResycleURLs(resycleURLs);
             }
