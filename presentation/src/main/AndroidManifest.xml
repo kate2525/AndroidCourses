@@ -35,7 +35,8 @@
         <activity android:name=".lesson7.Lesson7Activity" />
         <activity android:name=".lesson8.Lesson8Activity" />
         <activity android:name=".lessson12.Lesson12Activity" />
-        <activity android:name=".lesson13.Lesson13Activity"/>
+        <activity android:name=".lesson13.Lesson13Activity" />
+        <activity android:name=".lesson14.Lesson14Activity"/>
 
         <!-- <receiver android:name=".lesson4.MyBroadcastReciver"> -->
         <!-- <intent-filter> -->
@@ -51,6 +52,7 @@
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".home10.Home10Activity" />
         <activity android:name=".home9.Home9Activity" />
+        <activity android:name=".home10.EachIdActivity" />
 
     </application>
 

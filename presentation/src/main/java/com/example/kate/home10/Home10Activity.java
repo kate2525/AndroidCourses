@@ -15,7 +15,7 @@ public class Home10Activity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Home10ViewModel viewModel = new Home10ViewModel();
+        Home10ViewModel viewModel = new Home10ViewModel(this);
         this.viewModel = viewModel;
         ActivityHome10Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_home10);
         binding.setViewModel(viewModel);

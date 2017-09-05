@@ -1,13 +1,13 @@
 package com.example.kate.home10;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 
 import com.example.kate.base.BaceViewModel;
-import com.example.kate.home9.MyResycleViewAdapter;
 import com.kate.domain.Entity.UserDomain;
 import com.kate.domain.Interctions.ResycleRESTUseCase;
-import com.kate.domain.Interctions.ResycleViewUseCase;
 
 import java.util.List;
 
@@ -21,14 +21,26 @@ public class Home10ViewModel implements BaceViewModel {
     //public ObservableField<Home9ViewModel.STATE> state = new ObservableField<>(Home9ViewModel.STATE.PROGRESS);
     private ResycleRESTUseCase resycle= new ResycleRESTUseCase();
     public MyResycleViewAdapterHome10 adapter = new MyResycleViewAdapterHome10();
+    private Activity activity;
 
+    public Home10ViewModel(Activity activity) {
+        this.activity = activity;
+    }
 
     @Override
     public void init() {
        adapter.setListener(new MyResycleViewAdapterHome10.OnItemClickListener() {
            @Override
            public void onItemClick(UserDomain item) {
-               Log.d("AAAAAAAAA", "print");
+               EachIdActivity.show(activity, item.getName(), item.getSurname(), item.getAge());
+
+//               Intent intent = getIntent();
+//               String fName = intent.getStringExtra("fname");
+//               String lName = intent.getStringExtra("lname");
+//
+//               tvView.setText("Your name is: " + fName + " " + lName);
+
+
            }
        });
     }
