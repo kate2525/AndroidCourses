@@ -115,7 +115,7 @@
         android:id="@+id/home10Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="rest"
+        android:text="rest_h10"
         android:layout_below="@+id/home9Button"
         android:layout_alignParentStart="true" />
 
@@ -133,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/home6Button"
-        android:text="domain@pref" />
+        android:text="domain@pref_h9" />
 
     <Button
         android:id="@+id/lesson13Button"
@@ -147,9 +147,17 @@
         android:id="@+id/lesson14Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lesson14"
+        android:text="SharedPref"
         android:layout_below="@+id/lesson13Button"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/home14Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner_h14"
+        android:layout_below="@+id/home10Button"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

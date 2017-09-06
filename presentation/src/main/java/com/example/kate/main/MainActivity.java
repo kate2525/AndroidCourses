@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.example.kate.R;
 import com.example.kate.home1.Home1Activity;
 import com.example.kate.home10.Home10Activity;
+import com.example.kate.home14.Home14Activity;
 import com.example.kate.home2.Home2Activity;
 import com.example.kate.home3.Home3Activity;
 import com.example.kate.home4.Home4Activity;
@@ -52,6 +53,7 @@ public class MainActivity extends Activity {
     private Button home6Button;
     private Button home9Button;
     private Button home10Button;
+    private Button home14Button;
     private Button lesson2Button;
     private Button lesson3Button;
     private Button lesson4Button;
@@ -98,6 +100,7 @@ public class MainActivity extends Activity {
         home6Button = (Button) findViewById(R.id.home6Button);
         home9Button = (Button) findViewById(R.id.home9Button);
         home10Button = (Button) findViewById(R.id.home10Button);
+        home14Button = (Button) findViewById(R.id.home14Button);
         lesson2Button = (Button) findViewById(R.id.lesson2Button);
         lesson3Button = (Button) findViewById(R.id.lesson3Button);
         lesson4Button = (Button) findViewById(R.id.lesson4Button);
@@ -168,6 +171,13 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(MainActivity.this, Home10Activity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right,R.anim.left);
+            }
+        });
+        home14Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Home14Activity.class);
+                startActivity(intent);
             }
         });
         lesson2Button.setOnClickListener(new View.OnClickListener() {
@@ -246,11 +256,5 @@ public class MainActivity extends Activity {
 
     }
 
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        if(!disposable.isDisposed()) {
-//            disposable.dispose();
-//        }
-//    }
+
 }

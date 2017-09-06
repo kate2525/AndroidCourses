@@ -19,7 +19,7 @@ public class Lesson14Activity extends Activity {
     @BindView(R.id.editText2)
     EditText editText2;
     SharedPreferences sharedPreferences;
-    private static String SAVE = "это сохранится";
+    private static String SAVE = "название файла";
     private static String KEY_NAME = "key";
 
 
@@ -34,13 +34,14 @@ public class Lesson14Activity extends Activity {
        ButterKnife.bind(this);
         buttonClick.setText("click here");
 
+        //файл называется SAVE
         sharedPreferences = getSharedPreferences(SAVE, Context.MODE_PRIVATE);
 
         //сохранение данных по клику на кнопку
         buttonClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //по принципу intent
+                //сохранение в документ по принципу hoshmap
                 sharedPreferences.edit().putString(KEY_NAME, String.valueOf(editText2.getText()))
                                        .apply();
             }
