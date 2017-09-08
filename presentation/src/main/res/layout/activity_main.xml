@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.kate.main.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
     <Button
         android:id="@+id/home1Button"
         android:layout_width="wrap_content"
@@ -159,5 +169,15 @@
         android:layout_below="@+id/home10Button"
         android:layout_alignParentStart="true" />
 
+          <Button
+              android:id="@+id/lesson15Button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="SQL_L15"
+              android:layout_below="@+id/lesson14Button"
+              android:layout_alignEnd="@+id/lesson12Button" />
+
+      </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

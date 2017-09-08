@@ -1,21 +1,21 @@
-package com.example.kate.lesson15;
+package com.kate.domain.Entity;
 
 /**
  * Created by kate on 04.09.2017.
  */
 
 public class User {
-    private String id;
+    private int id;
     private String name;
     private int age;
     private Country countryPoUser;
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

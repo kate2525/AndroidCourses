@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.example.kate.lesson15.Lesson15ViewModel" />
+
+        <import type="java.lang.String" />
+
+        <variable
+            name="viewModel"
+            type="com.example.kate.lesson15.Lesson15ViewModel" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.kate.lesson15.Lesson15Activity">
+
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@{String.valueOf(viewModel.userId)}" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#4ea073"
+            android:hint="name"
+            android:text="@{viewModel.userName}" />
+
+        <EditText
+            android:id="@+id/userAge"
+            android:layout_width="wrap_content"
+            android:hint="age"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(viewModel.userAge)}"
+            android:layout_margin="20dp"
+            android:background="#2575aa"/>
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:text="add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.addUsers()}"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="135dp"
+            android:layout_below="@+id/userName"
+            android:layout_toEndOf="@+id/userName"
+            android:layout_marginStart="55dp" />
+
+
+    </LinearLayout>
+
+</layout>
