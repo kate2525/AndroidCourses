@@ -5,7 +5,11 @@ import android.app.Application;
 
 import com.squareup.leakcanary.LeakCanary;
 
+import io.realm.Realm;
+
 public class ExampleApplication extends Application {
+
+
 
     @Override public void onCreate() {
         super.onCreate();
@@ -15,6 +19,7 @@ public class ExampleApplication extends Application {
             return;
         }
         LeakCanary.install(this);
+        Realm.init(this);
         // Normal app init code...
     }
 }
