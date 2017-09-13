@@ -11,184 +11,193 @@
         android:layout_height="match_parent">
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+            <Button
+                android:id="@+id/home1Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="home1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-    <Button
-        android:id="@+id/home1Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="home1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+            <Button
+                android:id="@+id/home2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home1Button"
+                android:hint="home2" />
 
-    <Button
-        android:id="@+id/home2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="home2"
-        android:layout_below="@+id/home1Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/lesson2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/home2Button"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:hint="myView" />
 
-    <Button
-        android:id="@+id/lesson2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="myView"
-        android:layout_marginEnd="11dp"
-        android:layout_above="@+id/home2Button"
-        android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/home3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home2Button"
+                android:text="home3" />
 
-    <Button
-        android:id="@+id/home3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="home3"
-        android:layout_below="@+id/home2Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/lesson3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/home2Button"
+                android:layout_alignBottom="@+id/home2Button"
+                android:layout_alignStart="@+id/lesson2Button"
+                android:text="lesson3" />
 
-    <Button
-        android:id="@+id/lesson3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lesson3"
-        android:layout_alignBaseline="@+id/home2Button"
-        android:layout_alignBottom="@+id/home2Button"
-        android:layout_alignStart="@+id/lesson2Button" />
+            <Button
+                android:id="@+id/home4Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home3Button"
+                android:text="myView" />
 
-    <Button
-        android:id="@+id/home4Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="myView"
-        android:layout_below="@+id/home3Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/lesson4Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lesson3Button"
+                android:layout_below="@+id/lesson3Button"
+                android:text="lesson4" />
 
-    <Button
-        android:id="@+id/lesson4Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lesson4"
-        android:layout_below="@+id/lesson3Button"
-        android:layout_alignStart="@+id/lesson3Button" />
+            <Button
+                android:id="@+id/home5Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home4Button"
+                android:text="home5" />
 
-    <Button
-        android:id="@+id/home5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="home5"
-        android:layout_below="@+id/home4Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/lesson5Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/lesson4Button"
+                android:layout_below="@+id/lesson4Button"
+                android:text="recycle" />
 
-    <Button
-        android:id="@+id/lesson5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/lesson4Button"
-        android:layout_below="@+id/lesson4Button"
-        android:text="recycle" />
+            <Button
+                android:id="@+id/home6Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home5Button"
+                android:text="home6" />
 
-    <Button
-        android:id="@+id/home6Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="home6"
-        android:layout_below="@+id/home5Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/lesson6Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lesson5Button"
+                android:layout_below="@+id/lesson5Button"
+                android:text="lesson6" />
 
-    <Button
-        android:id="@+id/lesson6Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lesson6"
-        android:layout_below="@+id/lesson5Button"
-        android:layout_alignStart="@+id/lesson5Button" />
+            <Button
+                android:id="@+id/lesson7Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lesson6Button"
+                android:layout_below="@+id/lesson6Button"
+                android:text="lesson7" />
 
-    <Button
-        android:id="@+id/lesson7Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lesson7"
-        android:layout_below="@+id/lesson6Button"
-        android:layout_alignStart="@+id/lesson6Button" />
+            <Button
+                android:id="@+id/lesson8Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lesson7Button"
+                android:layout_below="@+id/lesson7Button"
+                android:text="lesson8" />
 
-    <Button
-        android:id="@+id/lesson8Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lesson8"
-        android:layout_below="@+id/lesson7Button"
-        android:layout_alignStart="@+id/lesson7Button" />
-    <Button
-        android:id="@+id/home10Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="rest_h10"
-        android:layout_below="@+id/home9Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/home10Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home9Button"
+                android:text="rest_h10" />
 
-    <Button
-        android:id="@+id/lesson12Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lesson12"
-        android:layout_below="@+id/lesson8Button"
-        android:layout_alignStart="@+id/lesson8Button" />
+            <Button
+                android:id="@+id/lesson12Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lesson8Button"
+                android:layout_below="@+id/lesson8Button"
+                android:text="lesson12" />
 
-    <Button
-        android:id="@+id/home9Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/home6Button"
-        android:text="domain@pref_h9" />
+            <Button
+                android:id="@+id/home9Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home6Button"
+                android:text="domain@pref_h9" />
 
-    <Button
-        android:id="@+id/lesson13Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/lesson8Button"
-        android:text="fragment"
-        android:layout_below="@+id/lesson12Button" />
+            <Button
+                android:id="@+id/lesson13Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lesson8Button"
+                android:layout_below="@+id/lesson12Button"
+                android:text="fragment" />
 
-    <Button
-        android:id="@+id/lesson14Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SharedPref"
-        android:layout_below="@+id/lesson13Button"
-        android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/lesson14Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/lesson13Button"
+                android:text="SharedPref" />
 
-    <Button
-        android:id="@+id/home14Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Spinner_h14"
-        android:layout_below="@+id/home10Button"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/home14Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/home10Button"
+                android:text="Spinner_h14" />
 
-          <Button
-              android:id="@+id/lesson15Button"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="SQL_L15"
-              android:layout_below="@+id/lesson14Button"
-              android:layout_alignEnd="@+id/lesson12Button" />
+            <Button
+                android:id="@+id/lesson15Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/lesson12Button"
+                android:layout_below="@+id/lesson14Button"
+                android:text="SQL_L15" />
 
+            <Button
+                android:id="@+id/lesson16Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="116dp"
+                android:layout_marginTop="8dp"
+                android:text="realm_L16" />
 
-    <Button
-        android:id="@+id/lesson16Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="116dp"
-        android:layout_marginTop="8dp"
-        android:text="lesson16" />
+            <Button
+                android:id="@+id/lesson17Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="114dp"
+                android:layout_marginTop="62dp"
+                android:text="lesson17"/>
 
-      </RelativeLayout>
+        </RelativeLayout>
 
     </ScrollView>
 

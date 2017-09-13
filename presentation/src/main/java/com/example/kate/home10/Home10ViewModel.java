@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.example.kate.base.BaceViewModel;
+import com.example.kate.main.ExampleApplication;
 import com.kate.domain.Entity.UserDomain;
 import com.kate.domain.Interctions.ResycleRESTUseCase;
 
 import java.util.List;
+
+import javax.inject.Inject;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.observers.DisposableObserver;
@@ -19,11 +22,14 @@ public class Home10ViewModel implements BaceViewModel {
     public enum STATE {PROGRESS, DATA}
 
     //public ObservableField<Home9ViewModel.STATE> state = new ObservableField<>(Home9ViewModel.STATE.PROGRESS);
-    private ResycleRESTUseCase resycle= new ResycleRESTUseCase();
+      @Inject
+      public ResycleRESTUseCase resycle;
+   // private ResycleRESTUseCase resycle= new ResycleRESTUseCase();
     public MyResycleViewAdapterHome10 adapter = new MyResycleViewAdapterHome10();
     private Activity activity;
 
     public Home10ViewModel(Activity activity) {
+        ExampleApplication.appComponent.inject(this);
         this.activity = activity;
     }
 

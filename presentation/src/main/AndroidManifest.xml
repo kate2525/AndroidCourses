@@ -55,7 +55,8 @@
         <activity android:name=".home10.EachIdActivity" />
         <activity android:name=".home14.Home14Activity" />
         <activity android:name=".lesson15.Lesson15Activity" />
-        <activity android:name=".lesson16.Lesson16Activity"/>
+        <activity android:name=".lesson16.Lesson16Activity" />
+        <activity android:name=".lesson17.Lesson17Activity"></activity>
     </application>
 
 </manifest>
