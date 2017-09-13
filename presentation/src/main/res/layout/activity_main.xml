@@ -195,7 +195,17 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="114dp"
                 android:layout_marginTop="62dp"
-                android:text="lesson17"/>
+                android:text="dagger2_L17"/>
+
+    <Button
+        android:id="@+id/lesson18Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        android:text="lesson18"
+        android:layout_marginEnd="116dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
 

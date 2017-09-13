@@ -23,6 +23,7 @@ import com.example.kate.lesson14.Lesson14Activity;
 import com.example.kate.lesson15.Lesson15Activity;
 import com.example.kate.lesson16.Lesson16Activity;
 import com.example.kate.lesson17.Lesson17Activity;
+import com.example.kate.lesson18.Lesson18Activity;
 import com.example.kate.lesson2.Lesson2Activity;
 import com.example.kate.lesson3.Lesson3Activity;
 import com.example.kate.lesson4.Lesson4Activity;
@@ -70,6 +71,7 @@ public class MainActivity extends Activity {
     private Button lesson15Button;
     private Button lesson16Button;
     private Button lesson17Button;
+    private Button lesson18Button;
     //private Disposable disposable;
 
     @Override
@@ -120,6 +122,7 @@ public class MainActivity extends Activity {
         lesson15Button = (Button) findViewById(R.id.lesson15Button);
         lesson16Button = (Button) findViewById(R.id.lesson16Button);
         lesson17Button = (Button) findViewById(R.id.lesson17Button);
+        lesson18Button = (Button) findViewById(R.id.lesson18Button);
 
         home1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -279,6 +282,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Lesson17Activity.class);
+                startActivity(intent);
+            }
+        });
+        lesson18Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Lesson18Activity.class);
                 startActivity(intent);
             }
         });
